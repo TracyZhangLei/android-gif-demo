@@ -37,6 +37,12 @@ public class MainActivity extends Activity {
 		msgs.add("You can download the demo from https://github.com/TracyZhangLei");
 		msgs.add("[微笑][微笑][微笑]");
 		msgs.add("[咖啡][微笑][咖啡]");
+		msgs.add("[咖啡][微笑][咖啡]");
+		msgs.add("[咖啡][微笑][咖啡]");
+		msgs.add("[咖啡][微笑][咖啡]");
+		msgs.add("[咖啡][微笑][咖啡]");
+		msgs.add("[咖啡][微笑][咖啡]");
+		msgs.add("[咖啡][微笑][咖啡]");
 		
 		msgs.add("中华人民共和国万岁！[微笑]");
 		msgs.add("Long live the People's Republic of China！[微笑]");
