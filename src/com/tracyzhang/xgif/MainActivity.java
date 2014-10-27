@@ -12,8 +12,7 @@ import com.tracyzhang.xgif.adapter.ChatAdapter;
 
 /**
  * 
- * @author tracyZhang  https://github.com/TracyZhangLei
- * @since  2014-4-4
+ * @author tracyZhang   QQ:381356799
  *
  */
 public class MainActivity extends Activity {

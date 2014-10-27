@@ -1,5 +1,6 @@
 package com.tracyzhang.xgif.adapter;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,8 +22,7 @@ import com.tracyzhang.xgif.view.AnimatedImageSpan;
 
 /**
  * 
- * @author tracyZhang  https://github.com/TracyZhangLei
- * @since  2014-4-4
+ * @author tracyZhang  QQ:381356799
  *
  */
 
@@ -91,14 +91,14 @@ public class ChatAdapter extends BaseAdapter{
 			int m = localMatcher.end();
 			if (m - k < 8) {
 				int face = fm.getFaceId(str2);
-				if(-1!=face){
-					AnimatedImageSpan localImageSpan = new AnimatedImageSpan(new AnimatedGifDrawable(cxt.getResources().openRawResource(face), new AnimatedGifDrawable.UpdateListener() {   
+				if(-1!=face){//wrapping with weakReference
+					WeakReference<AnimatedImageSpan> localImageSpanRef = new WeakReference<AnimatedImageSpan>(new AnimatedImageSpan(new AnimatedGifDrawable(cxt.getResources().openRawResource(face), new AnimatedGifDrawable.UpdateListener() {   
 					    @Override
 					    public void update() {//update the textview
 					        tv.postInvalidate();
 					    }
-					}));
-					value.setSpan(localImageSpan, k, m, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+					})));
+					value.setSpan(localImageSpanRef.get(), k, m, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
 				}
 			}
 		}
