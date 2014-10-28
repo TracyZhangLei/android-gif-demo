@@ -1,4 +1,3 @@
-XGifView
+android gif demo
 ========
-
-gif展示
+show .gif on android
